@@ -1,0 +1,60 @@
+{
+  "dataset_name": "formal_baseline_MAIN10_V2_ACC",
+  "image_width": 1000,
+  "image_height": 153,
+  "rgb_channel_meaning": {
+    "input_R": "H1 ground acceleration",
+    "input_G": "H2 ground acceleration",
+    "input_B": "vertical ground acceleration",
+    "target_R": "X absolute nodal acceleration",
+    "target_G": "Y absolute nodal acceleration",
+    "target_B": "Z absolute nodal acceleration"
+  },
+  "mapping": "clip(value/scale,-1,1), RGB=round((normalized+1)*127.5)",
+  "scale_source": "training split only",
+  "percentile": 99.9,
+  "input_scales_m_s2": [
+    2.800635576248169,
+    2.8694629669189453,
+    5.2438530921936035
+  ],
+  "absolute_acceleration_scales_m_s2": [
+    3.7786312103271484,
+    6.726921081542969,
+    8.142179489135742
+  ],
+  "source_npz_acceleration_definition": "relative",
+  "target_acceleration_definition": "absolute",
+  "source_mode_detection": {
+    "relative_score": 0.0,
+    "absolute_score": 1.0
+  },
+  "splits": {
+    "train": {
+      "records": 549,
+      "target_clipped_fraction_xyz": [
+        0.0010042620569782254,
+        0.0010231079681417194,
+        0.0010137743014631475
+      ]
+    },
+    "val": {
+      "records": 157,
+      "target_clipped_fraction_xyz": [
+        0.0007817326505973939,
+        0.0010830523292119395,
+        0.00090937096707048
+      ]
+    },
+    "test": {
+      "records": 78,
+      "target_clipped_fraction_xyz": [
+        0.0014564270152505447,
+        0.0017779453661806604,
+        0.0006539299480475951
+      ]
+    }
+  },
+  "source_npz_directory": "data/processed/response/response_npz",
+  "window_definition": "MAIN10 V2"
+}

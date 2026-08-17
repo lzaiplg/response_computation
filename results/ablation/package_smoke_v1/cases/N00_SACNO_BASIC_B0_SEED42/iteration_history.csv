@@ -1,0 +1,2 @@
+﻿epoch,seconds,selection_score,train_total,train_ranking,train_correction,train_zero_total,train_zero_waveform,train_zero_slope,train_zero_spectrum,train_zero_phase,train_zero_spatial,train_zero_sensor,train_zero_peak,train_zero_direction,tune_zero_nrmse,tune_zero_rmse_physical,tune_zero_peak_abs_physical,tune_zero_peak_are_pct
+1,1.6825687885284424,0.3168769219822539,0.10552505403757095,0.0,0.0,0.10552505403757095,0.10552505403757095,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.190774355083704,1.0611281991004944,5.4069609344005585,76.01712940769457

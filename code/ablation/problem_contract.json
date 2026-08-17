@@ -1,0 +1,70 @@
+{
+  "contract_version": "1.0.0",
+  "objective": "Reconstruct full-field bridge seismic response under matched sensor-free and sensor-assisted conditions.",
+  "targets": {
+    "displacement": {
+      "shape_bcnt": [null, 3, 153, 1000],
+      "unit": "m"
+    },
+    "absolute_acceleration": {
+      "shape_bcnt": [null, 3, 153, 1000],
+      "unit": "m/s^2"
+    }
+  },
+  "required_state_dimension": {
+    "nodes": 153,
+    "time_steps": 1000,
+    "directions": 3
+  },
+  "known_at_deployment": [
+    "three-component ground acceleration",
+    "fixed bridge node coordinates",
+    "sensor locations and availability mask",
+    "sensor acceleration only when sensors are available"
+  ],
+  "sensor_free_input": "ground acceleration plus identically zero sensor values and identically zero sensor mask",
+  "sensor_assisted_input": "the same ground acceleration plus sparse absolute sensor acceleration and its availability mask",
+  "sensor_node_ids": [211, 232, 241, 250, 271],
+  "sensor_node_rows": [18, 67, 76, 85, 134],
+  "pier_top_node_ids": [143, 144, 145, 146],
+  "pier_bottom_node_ids": [107, 108, 109, 110],
+  "primary_evaluation": "all 148 unobserved nodes",
+  "secondary_evaluation": [
+    "pier-top nodes",
+    "pier-bottom nodes",
+    "all 153 nodes",
+    "per-direction waveform, peak and peak-time metrics"
+  ],
+  "data_policy": {
+    "available_train_records": 549,
+    "available_historical_validation_records": 157,
+    "available_formal_test_records": 78,
+    "formal_test_records": 78,
+    "formal_test_available": true,
+    "development_split": "deterministic hash split within the 549 training records",
+    "external_evaluation_split": "the 157 historical validation records; report only, not a pristine final test",
+    "formal_test_split": "78 untouched records; evaluate only after checkpoint and strategy selection are frozen",
+    "normalization_source": "original 549-record training split only"
+  },
+  "fairness_invariants": [
+    "B0 and B1 use identical architecture and parameter count",
+    "B0 and B1 use identical data split, optimizer budget, seed and evaluation code",
+    "only sensor values and mask differ",
+    "observed sensor rows are excluded from the primary metric",
+    "full 153 by 1000 output is retained"
+  ],
+  "forbidden": [
+    "using unobserved response truth as model input",
+    "using historical validation truth for training or checkpoint selection",
+    "selecting only favorable earthquakes, nodes, directions or seeds",
+    "replacing the independent acceleration target with acceleration differentiated from predicted displacement",
+    "reducing the output to only pier or sensor nodes",
+    "overwriting retained baseline checkpoints or completed immutable cases"
+  ],
+  "retention_rule": {
+    "primary": "at least 5 percent unobserved-node RMSE reduction relative to the matched float baseline",
+    "safety": "peak error degradation no greater than 2 percent",
+    "sensor_value": "B1 beats B0 on at least 65 percent of records",
+    "robustness": "directionally consistent improvement over three seeds before a strong claim"
+  }
+}

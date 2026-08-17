@@ -1,0 +1,6 @@
+numpy>=1.26
+Pillow>=10.0
+matplotlib>=3.8
+torch>=2.5
+torchvision>=0.20
+openseespy>=3.5.0

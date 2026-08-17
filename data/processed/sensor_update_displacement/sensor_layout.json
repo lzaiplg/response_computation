@@ -1,0 +1,19 @@
+{
+  "layout_name": "S5_U_uniform_girder",
+  "description": "Five girder sensors: left side-span midpoint, main-span quarter points, main-span midpoint, right side-span midpoint",
+  "sensor_node_ids": [211, 232, 241, 250, 271],
+  "sensor_labels": {
+    "211": "A_left_side_span_mid",
+    "232": "B_main_span_left_quarter",
+    "241": "C_main_span_mid",
+    "250": "D_main_span_right_quarter",
+    "271": "E_right_side_span_mid"
+  },
+  "sensor_directions": ["X", "Y", "Z"],
+  "target_node_count": 153,
+  "primary_evaluation_excludes_sensor_nodes": true,
+  "primary_evaluation_node_count": 148,
+  "pier_top_node_ids": [143, 144, 145, 146],
+  "pier_bottom_node_ids": [107, 108, 109, 110],
+  "pier_base_reference_node_ids": [105, 106]
+}

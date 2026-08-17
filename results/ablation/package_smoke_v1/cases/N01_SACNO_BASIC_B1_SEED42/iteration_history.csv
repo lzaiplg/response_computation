@@ -1,0 +1,2 @@
+﻿epoch,seconds,selection_score,train_total,train_ranking,train_correction,train_real_total,train_real_waveform,train_real_slope,train_real_spectrum,train_real_phase,train_real_spatial,train_real_sensor,train_real_peak,train_real_direction,tune_real_nrmse,tune_real_rmse_physical,tune_real_peak_abs_physical,tune_real_peak_are_pct
+1,2.318161725997925,0.31230034805983314,0.10346454381942749,0.0,0.0,0.10346454381942749,0.10346454381942749,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.18700141832232475,1.036276027560234,5.476564943790436,76.94888182282463

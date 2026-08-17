@@ -1,0 +1,35 @@
+__pycache__/
+*.pyc
+.venv/
+results/*
+models/*
+!results/B0/
+!results/B1/
+!results/curves/
+!results/ablation/
+!results/B0/.gitkeep
+!results/B1/.gitkeep
+!results/curves/.gitkeep
+!results/ablation/.gitkeep
+!models/
+!models/.gitkeep
+data/processed/response/output_nodal/
+data/processed/response/output_elemental/
+data/processed/response/response_data/
+data/processed/response/conversion_log.md
+
+# Large reproducible data artifacts. Keep them in the portable package or an
+# external data/LFS store; the GitHub repository tracks the generators,
+# mappings, split definitions and data manifest instead.
+data/raw/
+data/processed/response/response_npz/
+data/processed/baseline_displacement/dataset_rgb/
+data/processed/baseline_acceleration/dataset_rgb/
+data/processed/sensor_update_displacement/dataset_rgb/
+data/processed/sensor_update_acceleration/dataset_rgb/
+data/processed/*/previews/
+data/processed/*/dataset_rgb/
+data/processed/*/splits/
+
+# Generated validation reports and local smoke campaigns.
+code/ablation/preflight_report.json

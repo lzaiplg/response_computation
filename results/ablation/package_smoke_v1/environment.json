@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-08-17T13:21:33.465189+08:00",
+  "python": "D:\\anaconda3\\python.exe",
+  "python_version": "3.10.9 | packaged by Anaconda, Inc. | (main, Mar  1 2023, 18:18:15) [MSC v.1916 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "torch": "2.7.0+cpu",
+  "cuda_available": false,
+  "cuda_version": null,
+  "gpu": null,
+  "source_hashes": {
+    "ablation_data.py": "0e54586cbc05384bf4afc11a6dbaf3101b7762af03e2ff79677b9f215da2defb",
+    "ablation_model.py": "f5d72591d7c9f2e89043bfa8425f9dada42c2463ad181d4c65a49aff5f9c9d3d",
+    "ablation_losses.py": "5589773a092254924c025aed1e2094b0e2f37ae5dbee5c14a4c128c4ae3fbfd1",
+    "train_ablation_case.py": "8cf438989be269d97b4b1330ca5b71e399bb549fa90fbfacd87b38000b1a8b6d",
+    "run_ablation.py": "2cdb32635933e3294384471dc2dc97bece4ead5dbc8dc3949f01a5694ac536c2",
+    "preflight_ablation.py": "0888efac07ebd85fd697bc2efc4a91c01fde0f12890defe2706cdec15c91042e",
+    "analyze_campaign.py": "796bd893b3e5c1dc3abf2c71233eb5c2cf85e567a9190f547228e8eb65b7d1e1",
+    "analyze_strategy_screen.py": "2e10dd6426b5a895eb234168043f8db2312a5382db0d28858a52fa06501e924c",
+    "analyze_ablation.py": "7604e2728badeb007eaa5c6b6f51c3f677b8a8a0cfcb657cd09caa236e71ee76"
+  }
+}

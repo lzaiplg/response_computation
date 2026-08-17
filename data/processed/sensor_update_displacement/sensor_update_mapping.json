@@ -1,0 +1,113 @@
+{
+  "dataset_name": "formal_sensor_update_S5_U_7ch",
+  "input_channels": {
+    "0_2": "ground acceleration RGB, exactly matching A1",
+    "3_5": "sparse absolute sensor acceleration RGB",
+    "6": "sensor position mask (0=no sensor, 1=sensor)"
+  },
+  "target_channels": "original A1 displacement RGB (R=X,G=Y,B=Z)",
+  "network_input_shape_chw": [
+    7,
+    153,
+    1000
+  ],
+  "network_target_shape_chw": [
+    3,
+    153,
+    1000
+  ],
+  "sensor_node_ids": [
+    211,
+    232,
+    241,
+    250,
+    271
+  ],
+  "sensor_node_rows": [
+    18,
+    67,
+    76,
+    85,
+    134
+  ],
+  "sensor_coordinates": {
+    "211": [
+      -166.0,
+      0.0,
+      0.0
+    ],
+    "232": [
+      -98.0,
+      0.0,
+      0.0
+    ],
+    "241": [
+      -65.0,
+      0.0,
+      0.0
+    ],
+    "250": [
+      -32.0,
+      0.0,
+      0.0
+    ],
+    "271": [
+      36.0,
+      0.0,
+      0.0
+    ]
+  },
+  "unobserved_node_count": 148,
+  "source_npz_acceleration_definition": "relative",
+  "sensor_input_acceleration_definition": "absolute",
+  "source_mode_detection": {
+    "relative_score": 0.0,
+    "absolute_score": 1.0
+  },
+  "sensor_acceleration_scales": [
+    3.8941733837127686,
+    8.312073707580566,
+    9.882919311523438
+  ],
+  "sensor_acceleration_scale_unit": "same unit as NPZ accel/input",
+  "sensor_scale_percentile": 99.9,
+  "sensor_scale_source": "training split only",
+  "ground_acceleration_scales_m_s2": [
+    2.800635576248169,
+    2.8694629669189453,
+    5.2438530921936035
+  ],
+  "dynamic_displacement_scales_m": [
+    0.11608640104532242,
+    0.04276950657367706,
+    0.03683155030012131
+  ],
+  "rgb_mapping": "clip(value/scale,-1,1), RGB=round((normalized+1)*127.5)",
+  "mask_mapping": "PNG 0/255; loaded as tensor 0/1",
+  "splits": {
+    "train": {
+      "records": 549,
+      "sensor_clipped_fraction_xyz": [
+        3.2679738562091506e-05,
+        3.2679738562091506e-05,
+        3.2679738562091506e-05
+      ]
+    },
+    "val": {
+      "records": 157,
+      "sensor_clipped_fraction_xyz": [
+        2.3437825236251614e-05,
+        3.4969401773448234e-05,
+        4.133882852504059e-05
+      ]
+    },
+    "test": {
+      "records": 78,
+      "sensor_clipped_fraction_xyz": [
+        4.1897100720630135e-05,
+        7.407407407407407e-05,
+        2.4300318417965478e-05
+      ]
+    }
+  }
+}

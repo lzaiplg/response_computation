@@ -1,0 +1,4 @@
+data/raw/**/*.AT2 filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.DT2 filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.VT2 filter=lfs diff=lfs merge=lfs -text
+data/processed/response/response_npz/*.npz filter=lfs diff=lfs merge=lfs -text

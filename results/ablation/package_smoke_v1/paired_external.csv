@@ -1,0 +1,2 @@
+﻿architecture,b0_case_id,b0_correlation_mean,b0_rmse_mean,b1_case_id,b1_correlation_mean,b1_rmse_improvement_pct_mean,b1_rmse_mean,b1_win_rate_pct,formal_scope,fusion,loss_profile,record_count,seed
+sacno,N00_SACNO_BASIC_B0_SEED42,0.013809330412606338,1.0328769236803055,N01_SACNO_BASIC_B1_SEED42,0.015008968436808077,2.58328670566456,1.0072742998600006,100.0,False,coord_attention,basic,4,42

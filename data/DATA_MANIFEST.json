@@ -1,0 +1,43 @@
+{
+  "manifest_version": "1.0.0",
+  "package_root_rule": "All paths are relative to the package root.",
+  "records": {
+    "train": 549,
+    "val": 157,
+    "test": 78
+  },
+  "expected_response_records": 784,
+  "expected_shapes": {
+    "response_npz": [
+      153,
+      1000,
+      3
+    ],
+    "rgb_input": [
+      153,
+      1000,
+      3
+    ],
+    "rgb_target": [
+      153,
+      1000,
+      3
+    ]
+  },
+  "paths": {
+    "raw_earthquake": "data/raw/peer_earthquake_wav",
+    "response_npz": "data/processed/response/response_npz",
+    "splits": "config/splits"
+  },
+  "observed_files": {
+    "raw_files": 7139,
+    "raw_at2_files": 2374,
+    "response_npz_files": 784
+  },
+  "split_sha256": {
+    "train": "544505f9df318098ad7ed7845330697e3e5eea07601cb49a5911fe510c6ce2bb",
+    "val": "0770589ab76565d3cfec3e867c8d0666b34ceb68dae68737e7bdb298991ff8de",
+    "test": "c2bd64ca308e4d65c5780bb3b8e31a7c5ac6b37602a0e745466ae9b21e0526c0"
+  },
+  "note": "Large raw/NPZ/RGB artifacts are intentionally ignored by Git; copy or provision them separately."
+}

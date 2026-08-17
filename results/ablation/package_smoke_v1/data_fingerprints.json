@@ -1,0 +1,20 @@
+{
+  "npz_root": "D:\\pythonproject\\phd\\bridge_response_surrogate_pipeline\\data\\processed\\response\\response_npz",
+  "train_count": 480,
+  "tune_count": 69,
+  "external_count": 157,
+  "formal_test_available": true,
+  "formal_test_count": 78,
+  "node_count": 153,
+  "coordinate_shape": [
+    153,
+    3
+  ],
+  "split_seed": 20260814,
+  "split_rule": "SHA256 rank within original 549 training records; 69 tune and 480 train",
+  "external_warning": "The 157 records were used by historical models and are not a pristine final test.",
+  "train_list_sha256": "544505f9df318098ad7ed7845330697e3e5eea07601cb49a5911fe510c6ce2bb",
+  "val_list_sha256": "0770589ab76565d3cfec3e867c8d0666b34ceb68dae68737e7bdb298991ff8de",
+  "test_list_sha256": "c2bd64ca308e4d65c5780bb3b8e31a7c5ac6b37602a0e745466ae9b21e0526c0",
+  "npz_file_count": 784
+}
